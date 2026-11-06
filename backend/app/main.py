@@ -2,6 +2,7 @@
 TAH-015: Precision Agriculture and Crop Disease Predictor - FastAPI Backend Entrypoint
 """
 import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 import json
 from datetime import datetime, timedelta
 from fastapi import FastAPI
