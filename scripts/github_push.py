@@ -3,6 +3,15 @@ AgriVision: Automated GitHub Repository Creation and Push Tool
 """
 import os
 import sys
+
+# Ensure UTF-8 console output on Windows
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 import json
 import subprocess
 import urllib.request
@@ -22,7 +31,7 @@ def main():
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
     print("==================================================")
-    print("🚀 AgriVision GitHub Repo Creator & Auto-Pusher")
+    print("[*] AgriVision GitHub Repo Creator & Auto-Pusher")
     print("==================================================")
     print(f"Target repository: {repo_name}")
     print(f"Project directory: {project_root}")
@@ -110,8 +119,8 @@ def main():
 
     if code == 0:
         print("\n" + "="*50)
-        print(f"🎉 SUCCESS! AgriVision has been pushed to GitHub:")
-        print(f"👉 https://github.com/{github_username}/{repo_name}")
+        print(f"[+] SUCCESS! AgriVision has been pushed to GitHub:")
+        print(f"    https://github.com/{github_username}/{repo_name}")
         print("="*50)
     else:
         print(f"[-] Git push failed:\nSTDOUT: {stdout}\nSTDERR: {stderr}")
