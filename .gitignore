@@ -17,9 +17,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Temporary uploads generated during tests (keep sample_data and default samples)
+# Temporary uploads generated during tests
 uploads/leaf_*.jpg
 uploads/overlay_*.jpg
+backend/uploads/*.jpg
 
 # Datasets
 backend/dataset/
