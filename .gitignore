@@ -21,6 +21,11 @@ yarn-error.log*
 uploads/leaf_*.jpg
 uploads/overlay_*.jpg
 
+# Datasets
+backend/dataset/
+*.zip
+*.tar.gz
+
 # OS & Editor
 .DS_Store
 Thumbs.db
